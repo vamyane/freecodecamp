@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style type="text/css">
+html,body{
+  background:#eee;
+}
+h1,p{
+  text-align:center;
+}
+.quote{
+  width:350px;
+  height:150px;
+  background:#999;
+  margin:0 auto;
+  text-align:center;
+  font-size:35px;
+  font-weight:bold;
+  color:white;
+  font-family:"隶书";
+  padding:20px;
+}
+#button{
+  width:100px;
+  height:30px;
+  border-radius:4px;
+  background:#324856;
+  color:white;
+  font-size:20px;
+  position:absolute;
+  left:50%;
+  margin:10px -20px;
+}
+.button{
+  position:absolute;
+  left:50%;
+  margin:13px -100px;
+}
+</style>
+</head>
+<body>
+    <h1>Simple Random Older Quote System</h1>
+	<p>下面是一个随机长者名言系统，点击+1s按钮为长者续一秒</p>
+	<div class="quote"><span id="quote">历史的进程</span></div>
+	<div class="button">
+  	<a href="https://twitter.com/share" class="twitter-share-button" data-via="WamYane" data-size="large">Tweet</a>
+  	</div>
+ 	 <button id="button">+1s</button>
+	
+<script type="text/javascript">
+	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');	
+	var quote =["不要见的风就是的雨","完全无中生有的东西，你再帮他说一遍等于说你也有责任对吧","我是身经百战，见的多了","西方哪一个国家我没有去过？","美国的华莱士，比你们不知道高到哪里去了，我跟他谈笑风生","你们毕竟还是too young，问来问去的问题都too simple,sometimes naive!","我没有说钦点他当下一任，没有任何这个意思","你们啊，不要老想弄个大新闻，说现在已经钦定了就把我批派一番","人的一生当然要靠自我奋斗，但是也要考虑到历史的进程","我也不是谦虚，我一个上海的书记怎么就被调到北京去了呢","你们给我搞的这个东西啊，excited！"];
+	
+	document.getElementById("button").onclick = function  change(){
+		var a = Math.floor(Math.random()*quote.length);
+    document.getElementById("quote").innerHTML = quote[a];
+  	}
+</script>
+</body>
+</html>
